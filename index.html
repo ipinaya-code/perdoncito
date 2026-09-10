@@ -116,7 +116,8 @@
 
   <div class="card" id="main-card">
     <div class="img-container">
-      <img id="photo" src="/foto1.jpeg" alt="Nuestra foto">
+      <!-- Se eliminó la barra '/' para que use la ruta relativa exacta -->
+      <img id="photo" src="foto1.jpeg" alt="Nuestra foto">
     </div>
     
     <h1 id="title">¿Me perdonas, mi amor? 🥺💔</h1>
@@ -129,15 +130,15 @@
   </div>
 
   <script>
-    // Rutas de tus fotos ordenadas
+    // Rutas de tus fotos ordenadas sin la barra inicial
     const photos = [
-      'foto1.jpeg', // 120470.png
-      'foto2.jpeg', // 120469.png
-      'foto3.jpeg', // 120468.png
-      'foto4.jpeg'  // 120467.png
+      'foto1.jpeg',
+      'foto2.jpeg',
+      'foto3.jpeg',
+      'foto4.jpeg'
     ];
 
-    const finalPhoto = 'foto1.jpeg'; // 120215.png
+    const finalPhoto = 'foto1.jpeg';
 
     const phrases = [
       "¿Segura? Pensalo bien... 🥺",
@@ -191,11 +192,11 @@
       titleElement.innerText = "¡Siiii! ¡Sabía que me perdonarías! 🎉💖";
       messageElement.innerText = "Prometo sacarte siempre la mejor de las sonrisas. ¡Te amo muchísimo!";
       
-      // Ocultar botones y reiniciar escala
+      // Ocultar botones
       btnSi.style.display = 'none';
       btnNo.style.display = 'none';
 
-      // Efecto simple de confeti con emojis
+      // Efecto de lluvia de corazones
       crearLluviaCorazones();
     });
 
@@ -212,7 +213,7 @@
       }
     }
 
-    // Agregar estilos CSS para la animación de caída de corazones
+    // Estilos CSS para la animación de caída de corazones
     const styleSheet = document.styleSheets[0];
     styleSheet.insertRule(`
       @keyframes fall {
